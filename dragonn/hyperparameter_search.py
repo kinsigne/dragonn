@@ -113,7 +113,7 @@ class HyperparameterSearcher(object):
                                         for dictionary in (hyperparameters, self.fixed_hyperparameters)
                                         for key, value in dictionary.items()})
             model.train(self.X_train, self.y_train, validation_data=self.validation_data)
-            print(self.validation_data)
+            # print(self.validation_data)
             task_scores = model.score(self.validation_data[0], self.validation_data[1], self.metric)
             score = task_scores.mean()  # mean across tasks
             # Record hyperparameters and validation loss
