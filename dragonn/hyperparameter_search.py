@@ -108,6 +108,7 @@ class HyperparameterSearcher(object):
                         hyperparameters[name] = int(round(hyperparameters[name]))
                     i += 1
             assert i == len(raw_hyperparameters)
+            print(hyperparameters)
             # Try these hyperparameters
             model = self.model_class(**{key: value
                                         for dictionary in (hyperparameters, self.fixed_hyperparameters)
